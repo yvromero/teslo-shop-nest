@@ -16,7 +16,8 @@ $ yarn install
 3. Copy the file ```.env.template``` and rename it to ```.env```
 4. Change the values of the environment variables
 5. Start the database```docker-compose up -d```
-6. Run the project:
+6. Execute seed```http://localhost:3000/api/seed```
+7. Run the project:
 ```bash
 # watch mode
 $ yarn start:dev
