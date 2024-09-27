@@ -4,6 +4,7 @@ import { ProductsController } from './products.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Product, ProductImage } from './entities';
 import { SeedService } from 'src/seed/seed.service';
+import { AuthModule } from 'src/auth/auth.module';
 
 
 
@@ -11,7 +12,8 @@ import { SeedService } from 'src/seed/seed.service';
   controllers: [ProductsController ],
   providers: [ProductsService, SeedService],
   imports: [
-    TypeOrmModule.forFeature([ Product, ProductImage ])
+    TypeOrmModule.forFeature([ Product, ProductImage ]),
+    AuthModule,
   ],
   exports: [
     ProductsService,
